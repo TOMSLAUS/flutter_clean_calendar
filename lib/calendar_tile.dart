@@ -130,8 +130,8 @@ class CalendarTile extends StatelessWidget {
                           return Container(
                             margin: EdgeInsets.only(
                                 left: 2.0, right: 2.0, top: 1.0),
-                            width: 5.0,
-                            height: 5.0,
+                            width: 10.0,
+                            height: 10.0,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 // If event is done (isDone == true) set the color of the dots to
