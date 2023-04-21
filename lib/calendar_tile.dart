@@ -126,20 +126,24 @@ class CalendarTile extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: events!.map((event) {
                           eventCount++;
-                          // Show a maximum of 3 dots.
+                          // Show a maximum of 1.
                           if (eventCount > 1) return Container();
+                              else
                           return Container(
-                            margin: EdgeInsets.only(top: 1.0),
-                            width: 20,
                             height: 5.0,
-                              color: (() {
-                                if (event.isDone)
-                                  return eventDoneColor ??
-                                      Theme.of(context).primaryColor;
-                                if (isSelected) return Colors.white;
-                                return eventColor ??
-                                    Theme.of(context).accentColor;
-                              }()),
+                            child: Expanded(
+                              child: Container(
+                                margin: EdgeInsets.only(top: 1.0),
+                                  color: (() {
+                                    if (event.isDone)
+                                      return eventDoneColor ??
+                                          Theme.of(context).primaryColor;
+                                    if (isSelected) return Colors.white;
+                                    return eventColor ??
+                                        Theme.of(context).accentColor;
+                                  }()),
+                              ),
+                            ),
                           );
                         }).toList())
                     : Container(),
