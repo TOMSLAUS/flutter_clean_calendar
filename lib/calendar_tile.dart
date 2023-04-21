@@ -127,7 +127,7 @@ class CalendarTile extends StatelessWidget {
                         children: events!.map((event) {
                           eventCount++;
                           // Show a maximum of 3 dots.
-                          if (eventCount > 3) return Container();
+                          if (eventCount > 1) return Container();
                           return Container(
                             margin: EdgeInsets.only(top: 1.0),
                             width: 20,
