@@ -131,18 +131,21 @@ class CalendarTile extends StatelessWidget {
                               else
                           return Container(
                             height: 5.0,
-                            child: Expanded(
-                              child: Container(
-                                margin: EdgeInsets.only(top: 1.0),
-                                  color: (() {
-                                    if (event.isDone)
-                                      return eventDoneColor ??
-                                          Theme.of(context).primaryColor;
-                                    if (isSelected) return Colors.white;
-                                    return eventColor ??
-                                        Theme.of(context).accentColor;
-                                  }()),
-                              ),
+                            child: Flex(
+                              direction: Axis.horizontal,
+                              children: [Expanded(
+                                child: Container(
+                                  margin: EdgeInsets.only(top: 1.0),
+                                    color: (() {
+                                      if (event.isDone)
+                                        return eventDoneColor ??
+                                            Theme.of(context).primaryColor;
+                                      if (isSelected) return Colors.white;
+                                      return eventColor ??
+                                          Theme.of(context).accentColor;
+                                    }()),
+                                ),
+                              )],
                             ),
                           );
                         }).toList())
