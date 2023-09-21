@@ -698,10 +698,10 @@ class _CalendarState extends State<Calendar> {
     });
     // todo kāpēc šis vispār vajadzīgs?
     // Check, if the callback was already executed before.
-    // if (isCallback) {
-    //   print('5');
-    //   _launchDateSelectionCallback(_selectedDate);
-    // }
+    if (isCallback) {
+      print('5');
+      _launchDateSelectionCallback(_selectedDate);
+    }
   }
 
   void _launchDateSelectionCallback(DateTime day) {
