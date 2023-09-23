@@ -705,6 +705,8 @@ class _CalendarState extends State<Calendar> {
   }
 
   void _launchDateSelectionCallback(DateTime day) {
+    print("date selected finally : ");
+      print(day.toString());
     if (widget.onDateSelected != null) {
       widget.onDateSelected!(day);
     }
